@@ -1,7 +1,7 @@
 # ⚡ Antigravity — SportMood Landing Page
 
 O projeto inclui uma animação personalizada desenvolvida previamente(whisk, Veo 3), que serviu como base para a construção do site utilizando uma plataforma baseada em Anti-Gravity para acelerar o desenvolvimento da interface.
-Uma landing page cinematográfica de alto impacto para uma marca de calçados esportivos de luxo. O projeto apresenta uma animação em sequência de frames de um tênis flutuando em anti-gravidade, criando uma experiência visual imersiva e premium.
+Uma landing page  para uma marca de calçados esportivos de luxo. O projeto apresenta uma animação em sequência de frames de um tênis flutuando em anti-gravidade, criando uma experiência visual imersiva e premium.
 
 ---
 ## 📸 Screenshot
