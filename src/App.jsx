@@ -10,6 +10,7 @@ const loadedImageUrls = Object.entries(imageModules)
 function App() {
   const [images] = useState(loadedImageUrls);
   const [currentFrame, setCurrentFrame] = useState(0);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // Preload images to avoid flickering during the animation sequence
   useEffect(() => {
@@ -39,11 +40,23 @@ function App() {
           <span className="logo-light">SPORT</span>
           <span className="logo-bold">MOOD</span>
         </div>
-        <ul className="nav-links">
-          <li><a href="#men">MEN</a></li>
-          <li><a href="#women">WOMEN</a></li>
-          <li><a href="#new">NEW RELEASES</a></li>
-          <li><a href="#tech">TECHNOLOGY</a></li>
+
+        {/* Hamburger Menu Button */}
+        <button 
+          className={`mobile-menu-toggle ${mobileMenuOpen ? 'active' : ''}`}
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul className={`nav-links ${mobileMenuOpen ? 'open' : ''}`}>
+          <li><a href="#men" onClick={() => setMobileMenuOpen(false)}>MEN</a></li>
+          <li><a href="#women" onClick={() => setMobileMenuOpen(false)}>WOMEN</a></li>
+          <li><a href="#new" onClick={() => setMobileMenuOpen(false)}>NEW RELEASES</a></li>
+          <li><a href="#tech" onClick={() => setMobileMenuOpen(false)}>TECHNOLOGY</a></li>
         </ul>
         <div className="nav-actions">
            <button className="icon-btn search-btn" aria-label="Search">
@@ -56,7 +69,7 @@ function App() {
         </div>
       </nav>
 
-      {/* Hero Section with Image Sequence Animation */}
+      
       <header className="hero-section">
         <div className="sequence-container">
           {images.length > 0 ? (
